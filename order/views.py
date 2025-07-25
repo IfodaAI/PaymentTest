@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .serializers import OrderSerializer
 from .models import Order
-from rest_framework import status
+from rest_framework import status,permissions
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from paytechuz.gateways.payme import PaymeGateway
@@ -11,6 +11,7 @@ from paytechuz.gateways.click import ClickGateway
 class OrderViewSet(ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+    permission_classes=(permissions.AllowAny,)
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
