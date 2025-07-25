@@ -25,6 +25,7 @@ jobs:
           ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
           set -e
           git config --global --add safe.directory /home/boshadmin/PaymentTest
+          sudo chown -R \$(whoami):\$(whoami) /home/boshadmin/PaymentTest || true
           cd /home/boshadmin
 
           if [ ! -d "PaymentTest/.git" ]; then
