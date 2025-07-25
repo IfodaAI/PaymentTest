@@ -1,6 +1,6 @@
 # views.py
 from paytechuz.integrations.django.views import BasePaymeWebhookView, BaseClickWebhookView
-from .models import Order
+from order.models import Order
 
 class PaymeWebhookView(BasePaymeWebhookView):
     def successfully_payment(self, params, transaction):
