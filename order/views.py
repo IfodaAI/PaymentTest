@@ -13,12 +13,35 @@ class OrderViewSet(ModelViewSet):
     serializer_class = OrderSerializer
     permission_classes=(permissions.AllowAny,)
 
+    def payme_gen(self,data):
+        payme = PaymeGateway()
+        return payme.create_payment(
+            id=data['id'],
+            amount=data['amount'],
+            return_url="https://webapp.ifoda-shop.uz"
+        )
+    
+    def click_gen(self,data):
+        click = ClickGateway()
+        return click.create_payment(
+            id=data['id'],
+            amount=data['amount'],
+            return_url="https://webapp.ifoda-shop.uz",
+        )
+
     def create(self, request, *args, **kwargs):
+        payment_type=request.data.pop('payment_type')
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
+        if payment_type == 'payme':
+            payment_link=self.payme_gen(serializer.data)
+        else:
+            payment_link=self.click_gen(serializer.data)
         headers = self.get_success_headers(serializer.data)
-        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+        data=serializer.data
+        data['payment_link']=payment_link
+        return Response(data, status=status.HTTP_201_CREATED, headers=headers)
 
 """
 
