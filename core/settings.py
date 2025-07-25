@@ -129,17 +129,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 PAYTECHUZ = {
     'PAYME': {
         'PAYME_ID': '6881b7acd5ee42a97c8b6eff',
-        'PAYME_KEY': 'HJX&ESmd&ZJbZgGjuYii0uXMePcuuoHSVBN?',
+        'PAYME_KEY': 'WcXfTV&otM3XbTiNfzSYrj66RtvFrBK8oh%b',#'HJX&ESmd&ZJbZgGjuYii0uXMePcuuoHSVBN?',
         'ACCOUNT_MODEL': 'order.models.Order',  # For example: 'orders.models.Order'
         'ACCOUNT_FIELD': 'id',
         'AMOUNT_FIELD': 'amount',
         'IS_TEST_MODE': True,  # Ishlab chiqarishda False qiling
     },
     'CLICK': {
-        'SERVICE_ID': 'your_service_id',
-        'MERCHANT_ID': 'your_merchant_id',
-        'MERCHANT_USER_ID': 'your_merchant_user_id',
-        'SECRET_KEY': 'your_secret_key',
+        'SERVICE_ID': '79480',
+        'MERCHANT_ID': '30842',
+        'MERCHANT_USER_ID': '61355',
+        'SECRET_KEY': 'KbcSKFP7TDVe',
         'IS_TEST_MODE': True,  # Ishlab chiqarishda False qiling
     }
 }
