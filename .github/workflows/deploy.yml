@@ -49,5 +49,8 @@ jobs:
           python manage.py makemigrations
           python manage.py migrate
 
-          python manage.py runserver 0.0.0.0:8001
+          # Supervisor restart
+          sudo supervisorctl reread
+          sudo supervisorctl update
+          sudo supervisorctl restart paymenttest
           EOF
