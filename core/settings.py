@@ -131,8 +131,8 @@ PAYTECHUZ = {
         'PAYME_ID': '6881b7acd5ee42a97c8b6eff',
         'PAYME_KEY': 'WcXfTV&otM3XbTiNfzSYrj66RtvFrBK8oh%b',#'HJX&ESmd&ZJbZgGjuYii0uXMePcuuoHSVBN?',
         'ACCOUNT_MODEL': 'order.models.Order',  # For example: 'orders.models.Order'
-        # 'ACCOUNT_FIELD': 'id',
-        # 'AMOUNT_FIELD': 'amount',
+        'ACCOUNT_FIELD': 'order_id',
+        'AMOUNT_FIELD': 'amount',
         'IS_TEST_MODE': True,  # Ishlab chiqarishda False qiling
     },
     'CLICK': {
