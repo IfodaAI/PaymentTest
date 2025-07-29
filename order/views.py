@@ -26,7 +26,12 @@ class OrderViewSet(ModelViewSet):
         )
     
     def click_gen(self,data):
-        click = ClickGateway()
+        click = ClickGateway(
+            service_id="79480",
+            merchant_id="30842",
+            merchant_user_id="61355",
+            secret_key="KbcSKFP7TDVe"
+        )
         return click.create_payment(
             id=data['id'],
             amount=data['amount'],
