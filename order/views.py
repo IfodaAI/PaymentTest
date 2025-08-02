@@ -12,6 +12,7 @@ class OrderViewSet(ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
     permission_classes=(permissions.AllowAny,)
+    # test comment
 
     def payme_gen(self,data):
         payme = PaymeGateway(
