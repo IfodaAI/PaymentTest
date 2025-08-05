@@ -29,7 +29,7 @@ class OrderViewSet(ModelViewSet):
         click = ClickGateway(
             service_id="79480",
             merchant_id="30842",
-            merchant_user_id="48273",
+            merchant_user_id="61355",
             secret_key="KbcSKFP7TDVe",
             is_test_mode=True
         )
