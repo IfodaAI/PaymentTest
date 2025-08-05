@@ -140,7 +140,7 @@ PAYTECHUZ = {
         'MERCHANT_ID': '30842',
         'MERCHANT_USER_ID': '61355',
         'SECRET_KEY': 'KbcSKFP7TDVe',
-        'IS_TEST_MODE': True,  # Ishlab chiqarishda False qiling
+        'IS_TEST_MODE': False,  # Ishlab chiqarishda False qiling
     }
 }
 
