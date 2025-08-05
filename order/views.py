@@ -31,7 +31,7 @@ class OrderViewSet(ModelViewSet):
             merchant_id="30842",
             merchant_user_id="48273",
             secret_key="KbcSKFP7TDVe",
-            is_test_mode=False
+            is_test_mode=True
         )
         return click.create_payment(
             id=data['id'],
