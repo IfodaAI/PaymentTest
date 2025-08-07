@@ -37,6 +37,7 @@ class OrderViewSet(ModelViewSet):
             id=data['id'],
             amount=data['amount'],
             return_url="https://webapp.ifoda-shop.uz",
+            description=False
         )
 
     def create(self, request, *args, **kwargs):
