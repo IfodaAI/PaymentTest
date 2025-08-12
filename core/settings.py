@@ -143,7 +143,7 @@ PAYTECHUZ = {
         'ACCOUNT_MODEL': 'order.models.Order',  # For example: 'orders.models.Order'
         'ACCOUNT_FIELD': 'order_id',
         'AMOUNT_FIELD': 'amount',
-        'IS_TEST_MODE': False,  # Ishlab chiqarishda False qiling
+        'IS_TEST_MODE': True,  # Ishlab chiqarishda False qiling
     }
 }
 
