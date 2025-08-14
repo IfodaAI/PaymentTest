@@ -29,7 +29,7 @@ class PaymeWebhookView(BasePaymeWebhookView):
                 "items":[
                     {
                         "discount": 0,
-                        "title": "Доставка",
+                        "title": "ENTOSORAN 50 gr",
                         "price": 1500 * 100,
                         "count": 1,
                         "code": "03808001001000000",
