@@ -8,12 +8,12 @@ class PaymeWebhookView(BasePaymeWebhookView):
                 "items":[
                     {
                         "discount": 0,
-                        "title": "ENTOSORAN 50 gr",
-                        "price": 1500 * 100,
+                        "title": "Мин.угит IFO UAN-32 0.2 л",
+                        "price": 10000 * 100,
                         "count": 1,
-                        "code": "03808001001000000",
+                        "code": "03105001001000000",
                         "vat_percent": 12,
-                        "package_code": "1470979"
+                        "package_code": "1248694"
                     }
                 ]}
     
