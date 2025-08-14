@@ -32,9 +32,9 @@ class PaymeWebhookView(BasePaymeWebhookView):
                         "title": "Доставка",
                         "price": 1500 * 100,
                         "count": 1,
-                        "code": "10112006002000000",
+                        "code": "03808001001000000",
                         "vat_percent": 12,
-                        "package_code": "1542432"
+                        "package_code": "1470979"
                     }
                 ]
             },
