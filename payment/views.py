@@ -16,6 +16,16 @@ class PaymeWebhookView(BasePaymeWebhookView):
                         "package_code": "1470979"
                     }
                 ]}
+    
+    def _check_perform_transaction(self, params):
+        account = self._find_account(params)
+        self._validate_amount(account, params.get('amount'))
+
+        # Bu yerda natijani olish
+        result = self.before_check_perform_transaction(params, account)
+
+        # Agar siz `before_check_perform_transaction` da natija qaytarsangiz — shu qaytadi
+        return result or {'allow': True}
 
     def successfully_payment(self, params, transaction):
         order = Order.objects.get(id=transaction.account_id)
