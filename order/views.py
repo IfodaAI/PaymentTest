@@ -31,13 +31,13 @@ class OrderViewSet(ModelViewSet):
             merchant_id="30842",
             merchant_user_id="48273",
             secret_key="KbcSKFP7TDVe",
-            is_test_mode=True
+            is_test_mode=False
         )
         return click.create_payment(
             id=data['id'],
             amount=data['amount'],
             return_url="https://webapp.ifoda-shop.uz",
-            description=False
+            description="48273"
         )
 
     def create(self, request, *args, **kwargs):
