@@ -11,7 +11,7 @@ class PaymeWebhookView(BasePaymeWebhookView):
                             {
                                 "discount": 0,
                                 "title": "Мин.угит IFO UAN-32 0.2 л",
-                                "price": 10000 * 100,
+                                "price": 1000 * 100,
                                 "count": 1,
                                 "code": "03105001001000000",
                                 "vat_percent": 12,
