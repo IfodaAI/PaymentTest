@@ -5,7 +5,7 @@ from order.models import Order
 class PaymeWebhookView(BasePaymeWebhookView):
     def before_check_perform_transaction(self, params, account):
         return {'allow': True,
-                "detail":{
+                "detail":{#here update
                     "receipt_type": 0,
                     "items":[
                             {
